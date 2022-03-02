@@ -2,12 +2,12 @@ import { useEffect, useState } from 'react'
 import { Noun as NounComponent, SeedData } from '../Noun'
 import { JsonRpcProvider, Provider } from '@ethersproject/providers'
 import { BigNumber, Contract } from 'ethers'
-import { Col, Container, ListGroup, Row } from 'react-bootstrap'
+import { Container, Row } from 'react-bootstrap'
 import nounsContract from '../../abis/nounsContract.json'
 import { Buffer } from 'buffer'
 // extract to config
 const provider: Provider = new JsonRpcProvider(
-  'https://eth-mainnet.alchemyapi.io/v2/kmnvB9AUO4Ll6BQX_eg8OKCInSUZ7sT7',
+  process.env.REACT_APP_RPC_URL
 )
 
 const nounsTokenContract: Contract = new Contract(
