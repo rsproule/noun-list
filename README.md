@@ -4,7 +4,6 @@
 - shows the rarity of each individual trait so far
 
 # To run
-
 ```
 cd frontend
 npm install
